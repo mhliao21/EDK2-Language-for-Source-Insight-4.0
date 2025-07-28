@@ -61,7 +61,8 @@ function GetCommentStringByLanguage (hbuf)
     }
 
     Props = GetBufProps (hbuf)
-	Debug(Props.Language)
+    Debug(Props.Language)
+
     if (Props.Language == Language_ASL ||
         Props.Language == Language_VFR) {
 
