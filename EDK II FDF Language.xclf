@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceInsightConfiguration
+	AppVer="4.00.0141"
+	AppVerMinReader="4.00.0032"
+	>
+	<!-- This is a Source Insight configuration file. -->
+	<!-- www.sourceinsight.com -->
+
+	<Languages>
+		<Language
+			Name="EDK II FDF Language"
+			Comment="Published from https://github.com/wujingbo/Source-Insight-4.0-for-edk2"
+			CaseSensitive="1"
+			CPreprocessor="1"
+			SmartIndent="0"
+			ContainsSourceCode="1"
+			SyntaxFormatting="1"
+			UseRegexParsing="1"
+			SyntaxDecorations="0"
+			CommentStyles="0"
+			AllowSmartTab="0"
+			DetectNumbers="1"
+			CHexNum="1"
+			IntelHexNum="0"
+			MotorolaHexNum="0"
+			BasicHexNum="0"
+			IntelOctalNum="0"
+			QOctalNum="0"
+			NonAlphaNumIdentChars="_!"
+			>
+			<CustomParsing>
+				<Expression
+					SymbolType="Class"
+					Pattern="\([\[]+[A-Za-z0-9._, ]+[\]]\)"
+					RegexType="Source Insight"
+					/>
+				<Expression
+					SymbolType="#-Directive"
+					Pattern="^!\([A-Za-z0-9()!=&gt;&lt;_ $/.]+\)"
+					RegexType="Source Insight"
+					/>
+				<Expression
+					SymbolType="Variable"
+					Pattern="^\w*DEFINE+\w+\([A-Za-z0-9_]+\)\w*="
+					RegexType="Source Insight"
+					/>
+				<Expression
+					SymbolType="Variable"
+					Pattern="^\w*SET+\w+[A-Za-z0-9_]+[.]+\([A-Za-z0-9_]+\)\w*="
+					RegexType="Source Insight"
+					/>
+			</CustomParsing>
+			<Ranges>
+				<Range
+					Type="Line"
+					AllowNesting="0"
+					ParseInside="0"
+					ReadOnly="0"
+					StyleName="Comment Single Line"
+					StyleDelimiter="1"
+					StartString="#"
+					EscapeString=""
+					ValidateColumns="0"
+					FirstColumn="0"
+					LastColumn="0"
+					/>
+				<Range
+					Type="Multiline"
+					AllowNesting="0"
+					ParseInside="0"
+					ReadOnly="0"
+					StyleName="String"
+					StyleDelimiter="1"
+					StartString="&apos;"
+					EndString="&apos;"
+					EscapeString="\"
+					ValidateColumns="0"
+					FirstColumn="0"
+					LastColumn="0"
+					/>
+				<Range
+					Type="Multiline"
+					AllowNesting="0"
+					ParseInside="0"
+					ReadOnly="0"
+					StyleName="String"
+					StyleDelimiter="1"
+					StartString="&quot;"
+					EndString="&quot;"
+					EscapeString="\"
+					ValidateColumns="0"
+					FirstColumn="0"
+					LastColumn="0"
+					/>
+				<Range
+					Type="Multiline"
+					AllowNesting="0"
+					ParseInside="0"
+					ReadOnly="0"
+					StyleName="String"
+					StyleDelimiter="1"
+					StartString="L&quot;"
+					EndString="&quot;"
+					EscapeString="\"
+					ValidateColumns="0"
+					FirstColumn="0"
+					LastColumn="0"
+					/>
+			</Ranges>
+			<Keywords>
+				<Item Keyword="!else" Style="Directive" />
+				<Item Keyword="!elseif" Style="Directive" />
+				<Item Keyword="!endif" Style="Directive" />
+				<Item Keyword="!if" Style="Directive" />
+				<Item Keyword="!ifdef" Style="Directive" />
+				<Item Keyword="!ifndef" Style="Directive" />
+				<Item Keyword="!include" Style="Keyword" />
+				<Item Keyword="=" Style="Operator" />
+				<Item Keyword="ACPI" Style="Default Text" />
+				<Item Keyword="APPLICATION" Style="Default Text" />
+				<Item Keyword="APRIORI" Style="Default Text" />
+				<Item Keyword="ASL" Style="Default Text" />
+				<Item Keyword="BaseAddress" Style="Default Text" />
+				<Item Keyword="BIN" Style="Default Text" />
+				<Item Keyword="BINARY" Style="Default Text" />
+				<Item Keyword="BlockSize" Style="Default Text" />
+				<Item Keyword="CAPSULE" Style="Default Text" />
+				<Item Keyword="CAPSULE_FLAGS" Style="Default Text" />
+				<Item Keyword="CAPSULE_GUID&quot;" Style="Default Text" />
+				<Item Keyword="CAPSULE_HEADER_INIT_VERSION" Style="Default Text" />
+				<Item Keyword="CAPSULE_HEADER_SIZE" Style="Default Text" />
+				<Item Keyword="CERTIFICATE_GUID" Style="Default Text" />
+				<Item Keyword="COMPAT16" Style="Default Text" />
+				<Item Keyword="COMP_BIN" Style="Default Text" />
+				<Item Keyword="COMP_CS" Style="Default Text" />
+				<Item Keyword="COMP_LOC" Style="Default Text" />
+				<Item Keyword="COMP_NAME" Style="Default Text" />
+				<Item Keyword="COMP_SIZE" Style="Default Text" />
+				<Item Keyword="COMP_SYM" Style="Default Text" />
+				<Item Keyword="COMP_TYPE" Style="Default Text" />
+				<Item Keyword="COMP_VER" Style="Default Text" />
+				<Item Keyword="DATA" Style="Default Text" />
+				<Item Keyword="DEFINE" Style="Default Text" />
+				<Item Keyword="DRIVER" Style="Default Text" />
+				<Item Keyword="DXE" Style="Default Text" />
+				<Item Keyword="DXE_CORE" Style="Default Text" />
+				<Item Keyword="DXE_DEPEX" Style="Default Text" />
+				<Item Keyword="ErasePolarity" Style="Default Text" />
+				<Item Keyword="ERASE_POLARITY" Style="Default Text" />
+				<Item Keyword="FALSE" Style="Boolean" />
+				<Item Keyword="FDF_SPECIFICATION" Style="Default Text" />
+				<Item Keyword="FDF_VERSION" Style="Default Text" />
+				<Item Keyword="FILE" Style="Default Text" />
+				<Item Keyword="FileSystemGuid" Style="Default Text" />
+				<Item Keyword="FMP_PAYLOAD" Style="Default Text" />
+				<Item Keyword="FREEFORM" Style="Default Text" />
+				<Item Keyword="FV" Style="Default Text" />
+				<Item Keyword="FvAlignment" Style="Default Text" />
+				<Item Keyword="FVMAIN" Style="Default Text" />
+				<Item Keyword="FvNameGuid" Style="Default Text" />
+				<Item Keyword="FvNameString" Style="Default Text" />
+				<Item Keyword="FV_IMAGE" Style="Default Text" />
+				<Item Keyword="HARDWARE_INSTANCE" Style="Default Text" />
+				<Item Keyword="IMAGE_HEADER_INIT_VERSION" Style="Default Text" />
+				<Item Keyword="IMAGE_INDEX" Style="Default Text" />
+				<Item Keyword="IMAGE_TYPE_ID" Style="Default Text" />
+				<Item Keyword="INF" Style="Default Text" />
+				<Item Keyword="LOCK_CAP" Style="Default Text" />
+				<Item Keyword="LOCK_STATUS" Style="Default Text" />
+				<Item Keyword="MEMORY_MAPPED" Style="Default Text" />
+				<Item Keyword="MONOTONIC_COUNT" Style="Default Text" />
+				<Item Keyword="NumBlocks" Style="Default Text" />
+				<Item Keyword="PCI_CLASS_CODE" Style="Default Text" />
+				<Item Keyword="PCI_COMPRESS" Style="Default Text" />
+				<Item Keyword="PCI_DEVICE_ID" Style="Default Text" />
+				<Item Keyword="PCI_REVISION" Style="Default Text" />
+				<Item Keyword="PCI_VENDOR_ID" Style="Default Text" />
+				<Item Keyword="PE32" Style="Default Text" />
+				<Item Keyword="PEI" Style="Default Text" />
+				<Item Keyword="PEIM" Style="Default Text" />
+				<Item Keyword="PEI_CORE" Style="Default Text" />
+				<Item Keyword="PEI_DEPEX" Style="Default Text" />
+				<Item Keyword="PEI_DXE_COMBO" Style="Default Text" />
+				<Item Keyword="PIC" Style="Default Text" />
+				<Item Keyword="RAW" Style="Default Text" />
+				<Item Keyword="READ_DISABLED_CAP" Style="Default Text" />
+				<Item Keyword="READ_ENABLED_CAP" Style="Default Text" />
+				<Item Keyword="READ_LOCK_CAP" Style="Default Text" />
+				<Item Keyword="READ_LOCK_STATUS" Style="Default Text" />
+				<Item Keyword="READ_STATUS" Style="Default Text" />
+				<Item Keyword="RuleOverride" Style="Default Text" />
+				<Item Keyword="SEC" Style="Default Text" />
+				<Item Keyword="SECTION" Style="Default Text" />
+				<Item Keyword="SET" Style="Default Text" />
+				<Item Keyword="Size" Style="Default Text" />
+				<Item Keyword="SMM" Style="Default Text" />
+				<Item Keyword="SMM_CORE" Style="Default Text" />
+				<Item Keyword="SMM_DEPEX" Style="Default Text" />
+				<Item Keyword="STICKY_WRITE" Style="Default Text" />
+				<Item Keyword="STRING" Style="Default Text" />
+				<Item Keyword="TE" Style="Default Text" />
+				<Item Keyword="TRUE" Style="Boolean" />
+				<Item Keyword="UI" Style="Default Text" />
+				<Item Keyword="USE" Style="Default Text" />
+				<Item Keyword="VERSION" Style="Default Text" />
+				<Item Keyword="WRITE_DISABLED_CAP" Style="Default Text" />
+				<Item Keyword="WRITE_ENABLED_CAP" Style="Default Text" />
+				<Item Keyword="WRITE_LOCK_CAP" Style="Default Text" />
+				<Item Keyword="WRITE_LOCK_STATUS" Style="Default Text" />
+				<Item Keyword="WRITE_POLICY_RELIABLE" Style="Default Text" />
+				<Item Keyword="WRITE_STATUS" Style="Default Text" />
+			</Keywords>
+		</Language>
+	</Languages>
+</SourceInsightConfiguration>

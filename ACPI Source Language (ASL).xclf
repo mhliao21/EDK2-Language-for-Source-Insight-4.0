@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceInsightConfiguration
+	AppVer="4.00.0141"
+	AppVerMinReader="4.00.0032"
+	>
+	<!-- This is a Source Insight configuration file. -->
+	<!-- www.sourceinsight.com -->
+
+	<Languages>
+		<Language
+			Name="ACPI Source Language (ASL)"
+			Comment="Published from https://github.com/wujingbo/Source-Insight-4.0-for-edk2"
+			CaseSensitive="0"
+			CPreprocessor="1"
+			SmartIndent="0"
+			ContainsSourceCode="1"
+			SyntaxFormatting="1"
+			UseRegexParsing="1"
+			SyntaxDecorations="0"
+			CommentStyles="0"
+			AllowSmartTab="0"
+			DetectNumbers="1"
+			CHexNum="1"
+			IntelHexNum="0"
+			MotorolaHexNum="0"
+			BasicHexNum="0"
+			IntelOctalNum="0"
+			QOctalNum="0"
+			NonAlphaNumIdentChars="_#"
+			>
+			<CustomParsing>
+				<Expression
+					SymbolType="Function"
+					Pattern="Method+\w*[(]+\w*\([A-Za-z0-9_]+\)[A-Za-z0-9_,)&quot; ]"
+					RegexType="Source Insight multi-line"
+					/>
+				<Expression
+					SymbolType="Function"
+					Pattern="Scope+\w*[(]+\w*\([A-Za-z0-9_]+\)[) ]"
+					RegexType="Source Insight"
+					/>
+				<Expression
+					SymbolType="Function"
+					Pattern="Scope+\w*[(]+\w*[A-Za-z0-9_\\ ].*\([A-Za-z0-9_\\]+\)[) ]"
+					RegexType="Source Insight"
+					/>
+				<Expression
+					SymbolType="Function"
+					Pattern="Device+\w*[(]+\w*\([A-Za-z0-9_]+\)[) ]"
+					RegexType="Source Insight"
+					/>
+				<Expression
+					SymbolType="Function"
+					Pattern="Device+\w*[(]+\w*[A-Za-z0-9_\\ ].*\([A-Za-z0-9_\\]+\)[) ]"
+					RegexType="Source Insight"
+					/>
+				<Expression
+					SymbolType="Variable"
+					Pattern="Name+\w*[(]+\w*\([A-Za-z0-9_\\]*\)[A-Za-z0-9_,) ]"
+					RegexType="Source Insight"
+					/>
+				<Expression
+					SymbolType="Data Member"
+					Pattern="^\w*[{]*\w*\([A-Za-z_][A-Za-z0-9_]+\)\w*,"
+					RegexType="Source Insight"
+					/>
+				<Expression
+					SymbolType="Data Member"
+					Pattern="^\w*[{]*\w*Offset+\w*(+[xX0-9]+)+[, ]*\([A-Za-z_][A-Za-z0-9_]+\)[, 0-9]"
+					RegexType="Source Insight"
+					/>
+				<Expression
+					SymbolType="Macro"
+					Pattern="^\w*#define+\w+\([A-Za-z0-9_]+\)\w+*"
+					RegexType="Source Insight"
+					/>
+				<Expression
+					SymbolType="Constant"
+					Pattern="^\w*#define+\w+\([A-Za-z0-9_]+\)"
+					RegexType="Source Insight"
+					/>
+			</CustomParsing>
+			<Ranges>
+				<Range
+					Type="Line"
+					AllowNesting="0"
+					ParseInside="0"
+					ReadOnly="0"
+					StyleName="Comment Single Line"
+					StyleDelimiter="1"
+					StartString="//"
+					EscapeString=""
+					ValidateColumns="0"
+					FirstColumn="0"
+					LastColumn="0"
+					/>
+				<Range
+					Type="Multiline"
+					AllowNesting="0"
+					ParseInside="0"
+					ReadOnly="0"
+					StyleName="Comment Multi Line"
+					StyleDelimiter="1"
+					StartString="/*"
+					EndString="*/"
+					EscapeString=""
+					ValidateColumns="0"
+					FirstColumn="0"
+					LastColumn="0"
+					/>
+				<Range
+					Type="Multiline"
+					AllowNesting="0"
+					ParseInside="0"
+					ReadOnly="0"
+					StyleName="String"
+					StyleDelimiter="1"
+					StartString="&quot;"
+					EndString="&quot;"
+					EscapeString="\"
+					ValidateColumns="0"
+					FirstColumn="0"
+					LastColumn="0"
+					/>
+				<Range
+					Type="Multiline"
+					AllowNesting="0"
+					ParseInside="0"
+					ReadOnly="0"
+					StyleName="String"
+					StyleDelimiter="1"
+					StartString="&apos;"
+					EndString="&apos;"
+					EscapeString="\"
+					ValidateColumns="0"
+					FirstColumn="0"
+					LastColumn="0"
+					/>
+			</Ranges>
+			<Keywords>
+				<Item Keyword="#define" Style="Keyword" />
+				<Item Keyword="#else" Style="Directive" />
+				<Item Keyword="#elseif" Style="Directive" />
+				<Item Keyword="#endif" Style="Directive" />
+				<Item Keyword="#if" Style="Directive" />
+				<Item Keyword="#ifdef" Style="Directive" />
+				<Item Keyword="#ifndef" Style="Directive" />
+				<Item Keyword="#include" Style="Keyword" />
+				<Item Keyword="AccessAs" Style="Default Text" />
+				<Item Keyword="Acquire" Style="Default Text" />
+				<Item Keyword="ActiveBoth" Style="Default Text" />
+				<Item Keyword="ActiveHigh" Style="Default Text" />
+				<Item Keyword="ActiveLow" Style="Default Text" />
+				<Item Keyword="Add" Style="Default Text" />
+				<Item Keyword="AddressingMode10Bit" Style="Default Text" />
+				<Item Keyword="AddressingMode7Bit" Style="Default Text" />
+				<Item Keyword="AddressRangeACPI" Style="Default Text" />
+				<Item Keyword="AddressRangeMemory" Style="Default Text" />
+				<Item Keyword="AddressRangeNVS" Style="Default Text" />
+				<Item Keyword="AddressRangeReserved" Style="Default Text" />
+				<Item Keyword="_ADR" Style="Default Text" />
+				<Item Keyword="Alias" Style="Default Text" />
+				<Item Keyword="And" Style="Default Text" />
+				<Item Keyword="AnyAcc" Style="Default Text" />
+				<Item Keyword="Arg0" Style="Default Text" />
+				<Item Keyword="Arg1" Style="Default Text" />
+				<Item Keyword="Arg2" Style="Default Text" />
+				<Item Keyword="Arg3" Style="Default Text" />
+				<Item Keyword="Arg4" Style="Default Text" />
+				<Item Keyword="Arg5" Style="Default Text" />
+				<Item Keyword="Arg6" Style="Default Text" />
+				<Item Keyword="_ASI" Style="Default Text" />
+				<Item Keyword="_ASZ" Style="Default Text" />
+				<Item Keyword="_ATT" Style="Default Text" />
+				<Item Keyword="AttribBlock" Style="Default Text" />
+				<Item Keyword="AttribBlockProcessCall" Style="Default Text" />
+				<Item Keyword="AttribByte" Style="Default Text" />
+				<Item Keyword="AttribBytes" Style="Default Text" />
+				<Item Keyword="AttribProcessCall" Style="Default Text" />
+				<Item Keyword="AttribQuick" Style="Default Text" />
+				<Item Keyword="AttribRawBytes" Style="Default Text" />
+				<Item Keyword="AttribRawProcessBytes" Style="Default Text" />
+				<Item Keyword="AttribSendReceive" Style="Default Text" />
+				<Item Keyword="AttribWord" Style="Default Text" />
+				<Item Keyword="BankField" Style="Default Text" />
+				<Item Keyword="_BAS" Style="Default Text" />
+				<Item Keyword="BigEndianing" Style="Default Text" />
+				<Item Keyword="_BM" Style="Default Text" />
+				<Item Keyword="Break" Style="Default Text" />
+				<Item Keyword="BreakPoint" Style="Default Text" />
+				<Item Keyword="Buffer" Style="Default Text" />
+				<Item Keyword="BufferAcc" Style="Default Text" />
+				<Item Keyword="BuffFieldObj" Style="Default Text" />
+				<Item Keyword="BuffObj" Style="Default Text" />
+				<Item Keyword="BusMaster" Style="Default Text" />
+				<Item Keyword="ByteAcc" Style="Default Text" />
+				<Item Keyword="Cacheable" Style="Default Text" />
+				<Item Keyword="Case" Style="Default Text" />
+				<Item Keyword="ClockPhaseFirst" Style="Default Text" />
+				<Item Keyword="ClockPhaseSecond" Style="Default Text" />
+				<Item Keyword="ClockPolarityHigh" Style="Default Text" />
+				<Item Keyword="ClockPolarityLow" Style="Default Text" />
+				<Item Keyword="Concatenate" Style="Default Text" />
+				<Item Keyword="ConcatenateResTemplate" Style="Default Text" />
+				<Item Keyword="CondRefOf" Style="Default Text" />
+				<Item Keyword="Connection" Style="Default Text" />
+				<Item Keyword="Continue" Style="Default Text" />
+				<Item Keyword="ControllerInitiated" Style="Default Text" />
+				<Item Keyword="CopyObject" Style="Default Text" />
+				<Item Keyword="CreateBitField" Style="Default Text" />
+				<Item Keyword="CreateByteField" Style="Default Text" />
+				<Item Keyword="CreateDWordField" Style="Default Text" />
+				<Item Keyword="CreateField" Style="Default Text" />
+				<Item Keyword="CreateQWordField" Style="Default Text" />
+				<Item Keyword="CreateWordField" Style="Default Text" />
+				<Item Keyword="DataBitsEight" Style="Default Text" />
+				<Item Keyword="DataBitsFive" Style="Default Text" />
+				<Item Keyword="DataBitsNine" Style="Default Text" />
+				<Item Keyword="DataBitsSeven" Style="Default Text" />
+				<Item Keyword="DataBitsSix" Style="Default Text" />
+				<Item Keyword="DataTableRegion" Style="Default Text" />
+				<Item Keyword="_DBT" Style="Default Text" />
+				<Item Keyword="DDBHandleObj" Style="Default Text" />
+				<Item Keyword="Debug" Style="Default Text" />
+				<Item Keyword="_DEC" Style="Default Text" />
+				<Item Keyword="Decode10" Style="Default Text" />
+				<Item Keyword="Decode16" Style="Default Text" />
+				<Item Keyword="Decrement" Style="Default Text" />
+				<Item Keyword="Default" Style="Default Text" />
+				<Item Keyword="DefinitionBlock" Style="Default Text" />
+				<Item Keyword="DenseTranslation" Style="Default Text" />
+				<Item Keyword="DerefOf" Style="Default Text" />
+				<Item Keyword="Device" Style="Default Text" />
+				<Item Keyword="DeviceInitiated" Style="Default Text" />
+				<Item Keyword="DeviceObj" Style="Default Text" />
+				<Item Keyword="Divide" Style="Default Text" />
+				<Item Keyword="DMA" Style="Default Text" />
+				<Item Keyword="_DPL" Style="Default Text" />
+				<Item Keyword="_DRS" Style="Default Text" />
+				<Item Keyword="DWordAcc" Style="Default Text" />
+				<Item Keyword="DWordIO" Style="Default Text" />
+				<Item Keyword="DWordMemory" Style="Default Text" />
+				<Item Keyword="DWordSpace" Style="Default Text" />
+				<Item Keyword="Edge" Style="Default Text" />
+				<Item Keyword="EISAID" Style="Default Text" />
+				<Item Keyword="Else" Style="Default Text" />
+				<Item Keyword="ElseIf" Style="Default Text" />
+				<Item Keyword="EmbeddedControl" Style="Default Text" />
+				<Item Keyword="_END" Style="Default Text" />
+				<Item Keyword="EndDependentFn" Style="Default Text" />
+				<Item Keyword="EntireRange" Style="Default Text" />
+				<Item Keyword="Event" Style="Default Text" />
+				<Item Keyword="EventObj" Style="Default Text" />
+				<Item Keyword="Exclusive" Style="Default Text" />
+				<Item Keyword="ExclusiveAndWake" Style="Default Text" />
+				<Item Keyword="ExtendedIO" Style="Default Text" />
+				<Item Keyword="ExtendedMemory" Style="Default Text" />
+				<Item Keyword="ExtendedSpace" Style="Default Text" />
+				<Item Keyword="External" Style="Default Text" />
+				<Item Keyword="Fatal" Style="Default Text" />
+				<Item Keyword="FFixedHW" Style="Default Text" />
+				<Item Keyword="Field" Style="Default Text" />
+				<Item Keyword="FieldUnitObj" Style="Default Text" />
+				<Item Keyword="FindSetLeftBit" Style="Default Text" />
+				<Item Keyword="FindSetRightBit" Style="Default Text" />
+				<Item Keyword="FixedDMA" Style="Default Text" />
+				<Item Keyword="FixedIO" Style="Default Text" />
+				<Item Keyword="_FLC" Style="Default Text" />
+				<Item Keyword="FlowControlHardware" Style="Default Text" />
+				<Item Keyword="FlowControlNone" Style="Default Text" />
+				<Item Keyword="FlowControlXon" Style="Default Text" />
+				<Item Keyword="FourWireMode" Style="Default Text" />
+				<Item Keyword="Fprintf" Style="Default Text" />
+				<Item Keyword="FromBCD" Style="Default Text" />
+				<Item Keyword="Function" Style="Default Text" />
+				<Item Keyword="GeneralPurposeIO" Style="Default Text" />
+				<Item Keyword="GenericSerialBus" Style="Default Text" />
+				<Item Keyword="GpioInt" Style="Default Text" />
+				<Item Keyword="GpioIo" Style="Default Text" />
+				<Item Keyword="_GRA" Style="Default Text" />
+				<Item Keyword="_HE" Style="Default Text" />
+				<Item Keyword="I2CSerialBusV2" Style="Default Text" />
+				<Item Keyword="If" Style="Default Text" />
+				<Item Keyword="Include" Style="Default Text" />
+				<Item Keyword="Increment" Style="Default Text" />
+				<Item Keyword="Index" Style="Default Text" />
+				<Item Keyword="IndexField" Style="Default Text" />
+				<Item Keyword="_INT" Style="Default Text" />
+				<Item Keyword="Interrupt" Style="Default Text" />
+				<Item Keyword="IntObj" Style="Default Text" />
+				<Item Keyword="IO" Style="Default Text" />
+				<Item Keyword="_IOR" Style="Default Text" />
+				<Item Keyword="IoRestrictionInputOnly" Style="Default Text" />
+				<Item Keyword="IoRestrictionNone" Style="Default Text" />
+				<Item Keyword="IoRestrictionNoneAndPreserve" Style="Default Text" />
+				<Item Keyword="IoRestrictionOutputOnly" Style="Default Text" />
+				<Item Keyword="IPMI" Style="Default Text" />
+				<Item Keyword="IRQ" Style="Default Text" />
+				<Item Keyword="IRQNoFlags" Style="Default Text" />
+				<Item Keyword="ISAOnlyRanges" Style="Default Text" />
+				<Item Keyword="LAnd" Style="Default Text" />
+				<Item Keyword="_LEN" Style="Default Text" />
+				<Item Keyword="LEqual" Style="Default Text" />
+				<Item Keyword="Level" Style="Default Text" />
+				<Item Keyword="LGreater" Style="Default Text" />
+				<Item Keyword="LGreaterEqual" Style="Default Text" />
+				<Item Keyword="_LIN" Style="Default Text" />
+				<Item Keyword="LittleEndian" Style="Default Text" />
+				<Item Keyword="_LL" Style="Default Text" />
+				<Item Keyword="LLess" Style="Default Text" />
+				<Item Keyword="LLessEqual" Style="Default Text" />
+				<Item Keyword="LNot" Style="Default Text" />
+				<Item Keyword="LNotEqual" Style="Default Text" />
+				<Item Keyword="Load" Style="Default Text" />
+				<Item Keyword="LoadTable" Style="Default Text" />
+				<Item Keyword="Local0" Style="Default Text" />
+				<Item Keyword="Local1" Style="Default Text" />
+				<Item Keyword="Local2" Style="Default Text" />
+				<Item Keyword="Local3" Style="Default Text" />
+				<Item Keyword="Local4" Style="Default Text" />
+				<Item Keyword="Local5" Style="Default Text" />
+				<Item Keyword="Local6" Style="Default Text" />
+				<Item Keyword="Local7" Style="Default Text" />
+				<Item Keyword="Lock" Style="Default Text" />
+				<Item Keyword="LOr" Style="Default Text" />
+				<Item Keyword="macro" Style="Default Text" />
+				<Item Keyword="_MAF" Style="Default Text" />
+				<Item Keyword="Match" Style="Default Text" />
+				<Item Keyword="_MAX" Style="Default Text" />
+				<Item Keyword="MaxFixed" Style="Default Text" />
+				<Item Keyword="MaxNotFixed" Style="Default Text" />
+				<Item Keyword="_MEM" Style="Default Text" />
+				<Item Keyword="Memory24" Style="Default Text" />
+				<Item Keyword="Memory32" Style="Default Text" />
+				<Item Keyword="Memory32Fixed" Style="Default Text" />
+				<Item Keyword="MEQ" Style="Default Text" />
+				<Item Keyword="Method" Style="Default Text" />
+				<Item Keyword="MethodObj" Style="Default Text" />
+				<Item Keyword="MGE" Style="Default Text" />
+				<Item Keyword="MGT" Style="Default Text" />
+				<Item Keyword="Mid" Style="Default Text" />
+				<Item Keyword="_MIF" Style="Default Text" />
+				<Item Keyword="_MIN" Style="Default Text" />
+				<Item Keyword="MinFixed" Style="Default Text" />
+				<Item Keyword="MinNotFixed" Style="Default Text" />
+				<Item Keyword="MLE" Style="Default Text" />
+				<Item Keyword="MLT" Style="Default Text" />
+				<Item Keyword="Mod" Style="Default Text" />
+				<Item Keyword="_MOD" Style="Default Text" />
+				<Item Keyword="_MTP" Style="Default Text" />
+				<Item Keyword="MTR" Style="Default Text" />
+				<Item Keyword="Multiply" Style="Default Text" />
+				<Item Keyword="Mutex" Style="Default Text" />
+				<Item Keyword="MutexObj" Style="Default Text" />
+				<Item Keyword="Name" Style="Default Text" />
+				<Item Keyword="NAnd" Style="Default Text" />
+				<Item Keyword="NoLock" Style="Default Text" />
+				<Item Keyword="NonCacheable" Style="Default Text" />
+				<Item Keyword="NonISAOnlyRanges" Style="Default Text" />
+				<Item Keyword="NoOp" Style="Default Text" />
+				<Item Keyword="NOr" Style="Default Text" />
+				<Item Keyword="Not" Style="Default Text" />
+				<Item Keyword="NotBusMaster" Style="Default Text" />
+				<Item Keyword="Notify" Style="Default Text" />
+				<Item Keyword="NotSerialized" Style="Default Text" />
+				<Item Keyword="ObjectType" Style="Default Text" />
+				<Item Keyword="Offset" Style="Default Text" />
+				<Item Keyword="One" Style="Default Text" />
+				<Item Keyword="Ones" Style="Default Text" />
+				<Item Keyword="OperationRegion" Style="Default Text" />
+				<Item Keyword="OpRegionObj" Style="Default Text" />
+				<Item Keyword="Or" Style="Default Text" />
+				<Item Keyword="Package" Style="Default Text" />
+				<Item Keyword="_PAR" Style="Default Text" />
+				<Item Keyword="ParityTypeEven" Style="Default Text" />
+				<Item Keyword="ParityTypeMark" Style="Default Text" />
+				<Item Keyword="ParityTypeNone" Style="Default Text" />
+				<Item Keyword="ParityTypeOdd" Style="Default Text" />
+				<Item Keyword="ParityTypeSpace" Style="Default Text" />
+				<Item Keyword="PCC" Style="Default Text" />
+				<Item Keyword="PciBarTarget" Style="Default Text" />
+				<Item Keyword="PCI_Config" Style="Default Text" />
+				<Item Keyword="_PHA" Style="Default Text" />
+				<Item Keyword="_PIN" Style="Default Text" />
+				<Item Keyword="PkgObj" Style="Default Text" />
+				<Item Keyword="_POL" Style="Default Text" />
+				<Item Keyword="PolarityHigh" Style="Default Text" />
+				<Item Keyword="PolarityLow" Style="Default Text" />
+				<Item Keyword="PosDecode" Style="Default Text" />
+				<Item Keyword="PowerResObj" Style="Default Text" />
+				<Item Keyword="PowerResource" Style="Default Text" />
+				<Item Keyword="_PPI" Style="Default Text" />
+				<Item Keyword="_PPIC" Style="Default Text" />
+				<Item Keyword="Prefetchable" Style="Default Text" />
+				<Item Keyword="Preserve" Style="Default Text" />
+				<Item Keyword="Printf" Style="Default Text" />
+				<Item Keyword="Processor" Style="Default Text" />
+				<Item Keyword="ProcessorObj" Style="Default Text" />
+				<Item Keyword="PullDefault" Style="Default Text" />
+				<Item Keyword="PullDown" Style="Default Text" />
+				<Item Keyword="PullNone" Style="Default Text" />
+				<Item Keyword="PullUp" Style="Default Text" />
+				<Item Keyword="QWordAcc" Style="Default Text" />
+				<Item Keyword="QWordIO" Style="Default Text" />
+				<Item Keyword="QWordMemory" Style="Default Text" />
+				<Item Keyword="QWordSpace" Style="Default Text" />
+				<Item Keyword="RawDataBuffer" Style="Default Text" />
+				<Item Keyword="_RBO" Style="Default Text" />
+				<Item Keyword="_RBW" Style="Default Text" />
+				<Item Keyword="ReadOnly" Style="Default Text" />
+				<Item Keyword="ReadWrite" Style="Default Text" />
+				<Item Keyword="RefOf" Style="Default Text" />
+				<Item Keyword="RegionSpaceKeyword" Style="Default Text" />
+				<Item Keyword="Register" Style="Default Text" />
+				<Item Keyword="Release" Style="Default Text" />
+				<Item Keyword="Reset" Style="Default Text" />
+				<Item Keyword="ResourceConsumer" Style="Default Text" />
+				<Item Keyword="ResourceProducer" Style="Default Text" />
+				<Item Keyword="ResourceTemplate" Style="Default Text" />
+				<Item Keyword="Return" Style="Default Text" />
+				<Item Keyword="Revision" Style="Default Text" />
+				<Item Keyword="_RNG" Style="Default Text" />
+				<Item Keyword="_RT" Style="Default Text" />
+				<Item Keyword="_RW" Style="Default Text" />
+				<Item Keyword="_RXL" Style="Default Text" />
+				<Item Keyword="Scope" Style="Default Text" />
+				<Item Keyword="Serialized" Style="Default Text" />
+				<Item Keyword="Shared" Style="Default Text" />
+				<Item Keyword="SharedAndWake" Style="Default Text" />
+				<Item Keyword="ShiftLeft" Style="Default Text" />
+				<Item Keyword="ShiftRight" Style="Default Text" />
+				<Item Keyword="_SHR" Style="Default Text" />
+				<Item Keyword="Signal" Style="Default Text" />
+				<Item Keyword="_SIZ" Style="Default Text" />
+				<Item Keyword="SizeOf" Style="Default Text" />
+				<Item Keyword="Sleep" Style="Default Text" />
+				<Item Keyword="_SLV" Style="Default Text" />
+				<Item Keyword="SMBus" Style="Default Text" />
+				<Item Keyword="SparseTranslation" Style="Default Text" />
+				<Item Keyword="_SPE" Style="Default Text" />
+				<Item Keyword="SPISerialbusV2" Style="Default Text" />
+				<Item Keyword="Stall" Style="Default Text" />
+				<Item Keyword="StartDependentFn" Style="Default Text" />
+				<Item Keyword="StartDependentFnNoPri" Style="Default Text" />
+				<Item Keyword="_STB" Style="Default Text" />
+				<Item Keyword="StopBitsOne" Style="Default Text" />
+				<Item Keyword="StopBitsOnePlusHalf" Style="Default Text" />
+				<Item Keyword="StopBitsTwo" Style="Default Text" />
+				<Item Keyword="StopBitsZero" Style="Default Text" />
+				<Item Keyword="Store" Style="Default Text" />
+				<Item Keyword="StrObj" Style="Default Text" />
+				<Item Keyword="SubDecode" Style="Default Text" />
+				<Item Keyword="Subtract" Style="Default Text" />
+				<Item Keyword="Switch" Style="Default Text" />
+				<Item Keyword="SystemCMOS" Style="Default Text" />
+				<Item Keyword="SystemIO" Style="Default Text" />
+				<Item Keyword="SystemMemory" Style="Default Text" />
+				<Item Keyword="ThermalZone" Style="Default Text" />
+				<Item Keyword="ThermalZoneObj" Style="Default Text" />
+				<Item Keyword="ThreeWireMode" Style="Default Text" />
+				<Item Keyword="Timer" Style="Default Text" />
+				<Item Keyword="ToBCD" Style="Default Text" />
+				<Item Keyword="ToBuffer" Style="Default Text" />
+				<Item Keyword="ToDecimalString" Style="Default Text" />
+				<Item Keyword="ToHexString" Style="Default Text" />
+				<Item Keyword="ToInteger" Style="Default Text" />
+				<Item Keyword="ToPLD" Style="Default Text" />
+				<Item Keyword="ToString" Style="Default Text" />
+				<Item Keyword="ToUUID" Style="Default Text" />
+				<Item Keyword="_TRA" Style="Default Text" />
+				<Item Keyword="Transfer16" Style="Default Text" />
+				<Item Keyword="Transfer8" Style="Default Text" />
+				<Item Keyword="Transfer8_16" Style="Default Text" />
+				<Item Keyword="_TRS" Style="Default Text" />
+				<Item Keyword="_TSF" Style="Default Text" />
+				<Item Keyword="_TTP" Style="Default Text" />
+				<Item Keyword="_TXL" Style="Default Text" />
+				<Item Keyword="_TYP" Style="Default Text" />
+				<Item Keyword="TypeStatic" Style="Default Text" />
+				<Item Keyword="TypeTranslation" Style="Default Text" />
+				<Item Keyword="UARTSerialBusV2" Style="Default Text" />
+				<Item Keyword="Unicode" Style="Default Text" />
+				<Item Keyword="UnknownObj" Style="Default Text" />
+				<Item Keyword="Unload" Style="Default Text" />
+				<Item Keyword="_VEN" Style="Default Text" />
+				<Item Keyword="VendorLong" Style="Default Text" />
+				<Item Keyword="VendorShort" Style="Default Text" />
+				<Item Keyword="Wait" Style="Default Text" />
+				<Item Keyword="While" Style="Default Text" />
+				<Item Keyword="Width128Bit" Style="Default Text" />
+				<Item Keyword="Width16Bit" Style="Default Text" />
+				<Item Keyword="Width256Bit" Style="Default Text" />
+				<Item Keyword="Width32Bit" Style="Default Text" />
+				<Item Keyword="Width64Bit" Style="Default Text" />
+				<Item Keyword="Width8Bit" Style="Default Text" />
+				<Item Keyword="WordAcc" Style="Default Text" />
+				<Item Keyword="WordBusNumber" Style="Default Text" />
+				<Item Keyword="WordIO" Style="Default Text" />
+				<Item Keyword="WordSpace" Style="Default Text" />
+				<Item Keyword="WriteAsOnes" Style="Default Text" />
+				<Item Keyword="WriteAsZeros" Style="Default Text" />
+				<Item Keyword="WriteCombining" Style="Default Text" />
+				<Item Keyword="Xor" Style="Default Text" />
+				<Item Keyword="Zero" Style="Default Text" />
+				<Item Keyword="\" Style="Default Text" />
+				<Item Keyword="^" Style="Default Text" />
+			</Keywords>
+		</Language>
+	</Languages>
+</SourceInsightConfiguration>

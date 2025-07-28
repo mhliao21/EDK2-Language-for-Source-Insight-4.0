@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceInsightConfiguration
+	AppVer="4.00.0141"
+	AppVerMinReader="4.00.0032"
+	>
+	<!-- This is a Source Insight configuration file. -->
+	<!-- www.sourceinsight.com -->
+
+	<Languages>
+		<Language
+			Name="EDK II INF Language"
+			Comment="Published from https://github.com/wujingbo/Source-Insight-4.0-for-edk2"
+			CaseSensitive="1"
+			CPreprocessor="1"
+			SmartIndent="0"
+			ContainsSourceCode="1"
+			SyntaxFormatting="1"
+			UseRegexParsing="1"
+			SyntaxDecorations="0"
+			CommentStyles="0"
+			AllowSmartTab="0"
+			DetectNumbers="0"
+			CHexNum="1"
+			IntelHexNum="0"
+			MotorolaHexNum="0"
+			BasicHexNum="0"
+			IntelOctalNum="0"
+			QOctalNum="0"
+			NonAlphaNumIdentChars="_"
+			>
+			<CustomParsing>
+				<Expression
+					SymbolType="Class"
+					Pattern="\([\[]+[A-Za-z0-9._, ]+[\]]\)"
+					RegexType="Source Insight"
+					/>
+				<Expression
+					SymbolType="Variable"
+					Pattern="^\w*LIBRARY_CLASS+\w*=+\w*\([A-Za-z0-9_]+\)"
+					RegexType="Source Insight"
+					/>
+				<Expression
+					SymbolType="Macro"
+					Pattern="^\w*DEFINE+\w+\([A-Za-z0-9_]+\)\w*="
+					RegexType="Source Insight"
+					/>
+			</CustomParsing>
+			<Ranges>
+				<Range
+					Type="Line"
+					AllowNesting="0"
+					ParseInside="0"
+					ReadOnly="0"
+					StyleName="Comment Single Line"
+					StyleDelimiter="1"
+					StartString="#"
+					EscapeString=""
+					ValidateColumns="0"
+					FirstColumn="0"
+					LastColumn="0"
+					/>
+				<Range
+					Type="Multiline"
+					AllowNesting="0"
+					ParseInside="0"
+					ReadOnly="0"
+					StyleName="String"
+					StyleDelimiter="1"
+					StartString="L&quot;"
+					EndString="&quot;"
+					EscapeString="\"
+					ValidateColumns="0"
+					FirstColumn="0"
+					LastColumn="0"
+					/>
+			</Ranges>
+			<Keywords>
+				<Item Keyword="=" Style="Operator" />
+				<Item Keyword="ACPI" Style="Default Text" />
+				<Item Keyword="ASL" Style="Default Text" />
+				<Item Keyword="BASE_NAME" Style="Default Text" />
+				<Item Keyword="BIN" Style="Default Text" />
+				<Item Keyword="BUILD_NUMBER" Style="Default Text" />
+				<Item Keyword="COMPAT16" Style="Default Text" />
+				<Item Keyword="CONSTRUCTOR" Style="Default Text" />
+				<Item Keyword="CUSTOM_MAKEFILE" Style="Default Text" />
+				<Item Keyword="DEFINE" Style="Default Text" />
+				<Item Keyword="DESTRUCTOR" Style="Default Text" />
+				<Item Keyword="DISPOSABLE" Style="Default Text" />
+				<Item Keyword="DPX_SOURCE" Style="Default Text" />
+				<Item Keyword="DXE_DEPEX" Style="Default Text" />
+				<Item Keyword="EDK_RELEASE_VERSION" Style="Default Text" />
+				<Item Keyword="ENTRY_POINT" Style="Default Text" />
+				<Item Keyword="FILE_GUID" Style="Default Text" />
+				<Item Keyword="FV" Style="Default Text" />
+				<Item Keyword="GUID" Style="Default Text" />
+				<Item Keyword="INF_VERSION" Style="Default Text" />
+				<Item Keyword="LIBRARY_CLASS" Style="Default Text" />
+				<Item Keyword="MODULE_TYPE" Style="Default Text" />
+				<Item Keyword="MODULE_UNI_FILE" Style="Default Text" />
+				<Item Keyword="PCD_IS_DRIVER" Style="Default Text" />
+				<Item Keyword="PCI_CLASS_CODE" Style="Default Text" />
+				<Item Keyword="PCI_COMPRESS" Style="Default Text" />
+				<Item Keyword="PCI_DEVICE_ID" Style="Default Text" />
+				<Item Keyword="PCI_VENDOR_ID" Style="Default Text" />
+				<Item Keyword="PE32" Style="Default Text" />
+				<Item Keyword="PEI_DEPEX" Style="Default Text" />
+				<Item Keyword="PIC" Style="Default Text" />
+				<Item Keyword="PI_SPECIFICATION_VERSION" Style="Default Text" />
+				<Item Keyword="RAW" Style="Default Text" />
+				<Item Keyword="SHADOW" Style="Default Text" />
+				<Item Keyword="SMM_DEPEX" Style="Default Text" />
+				<Item Keyword="SPEC" Style="Default Text" />
+				<Item Keyword="SUBTYPE_GUID" Style="Default Text" />
+				<Item Keyword="TE" Style="Default Text" />
+				<Item Keyword="UEFI_APP" Style="Default Text" />
+				<Item Keyword="UEFI_HII_RESOURCE_SECTION" Style="Default Text" />
+				<Item Keyword="UEFI_SPECIFICATION_VERSION" Style="Default Text" />
+				<Item Keyword="UI" Style="Default Text" />
+				<Item Keyword="UNI_UI" Style="Default Text" />
+				<Item Keyword="UNI_VER" Style="Default Text" />
+				<Item Keyword="UNLOAD_IMAGE" Style="Default Text" />
+				<Item Keyword="VER" Style="Default Text" />
+				<Item Keyword="VERSION_STRING" Style="Default Text" />
+			</Keywords>
+		</Language>
+	</Languages>
+</SourceInsightConfiguration>
